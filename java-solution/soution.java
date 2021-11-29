@@ -6,10 +6,8 @@ class ArrayMerger {
         int[] result = new int[arr1.length + arr2.length];
         int[] longer = arr1;
 
-        if (arr1.length < arr2.length) {
+        if (arr1.length < arr2.length)
             longer = arr2;
-        }
-
         if (arr1.length == 0)
             return arr2;
         if (arr2.length == 0)
@@ -29,14 +27,8 @@ class ArrayMerger {
             c++;
         }
 
-        if (arr1.length != arr2.length) {
-            while (a < longer.length) {
-                result[c] = longer[a];
-                c++;
-                a++;
-            }
-
-        }
+        if (arr1.length != arr2.length)
+            System.arraycopy(longer, a, result, c, longer.length - a);
 
         return result;
     }
