@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 class ArrayMerger {
-
+    // time complexity O(n)
     public static int[] merge(int[] arr1, int[] arr2) {
         int[] result = new int[arr1.length + arr2.length];
         int[] longer = arr1;
